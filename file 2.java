@@ -12,24 +12,14 @@ public class Main {
         //variables and scanner class
         Scanner scanner = new Scanner(System.in);
         int choice;
+        do{
+        menu();
         choice= scanner.nextInt();
-        do {
-            menu();
-
             switch (choice) {
-                case 1:
-                    personaDetails();
-                    break;
-                case 2:
-                    ternaryOperator();
-                    break;
-                case 3:
-                    examGrading();
-                    break;
-                default:
-                    quit();
-                    break;
-
+                case 1 -> personaDetails();
+                case 2 -> ternaryOperator();
+                case 3 -> examGrading();
+                default -> quit();
             }
         }while(choice<4);
     }
